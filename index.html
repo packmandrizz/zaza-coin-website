@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="ZAZA COIN — The Smokers Currency. A community-first Solana meme coin concept.">
+  <title>ZAZA COIN — The Smokers Currency</title>
+  <style>
+    :root{--bg:#08090b;--panel:#111318;--line:#292c35;--green:#a7ff35;--purple:#bd55ff;--text:#f7f8fb;--muted:#a4a8b5}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 12% 18%,#a7ff3512,transparent 32%),radial-gradient(ellipse at 87% 30%,#bd55ff12,transparent 35%)}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+    nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:950;letter-spacing:.06em}.mark{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--green),var(--purple));color:#09090c;font-size:24px;font-weight:1000;box-shadow:0 0 26px #a7ff3527}
+    .links{display:flex;gap:27px;color:#c4c6cf;font-size:13px}.links a:hover{color:var(--green)}.nav-cta,.btn{padding:12px 17px;border-radius:10px;border:1px solid #ffffff25;font-size:13px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s;cursor:pointer}
+    .nav-cta{background:#ffffff08}.nav-cta:hover,.btn.secondary:hover{border-color:var(--green)}
+    .hero{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:28px;padding:64px 0 72px}
+    .eyebrow{color:var(--green);font-size:11px;letter-spacing:.22em;font-weight:900;text-transform:uppercase;display:flex;align-items:center;gap:9px}.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}
+    h1{font-size:clamp(58px,8vw,100px);line-height:.86;letter-spacing:-.085em;margin:24px 0 23px;font-weight:1000}h1 span{display:block}.grad{background:linear-gradient(100deg,var(--green) 4%,#e0ffa9 42%,var(--purple) 92%);color:transparent;background-clip:text;-webkit-background-clip:text}
+    .lead{font-size:16px;line-height:1.8;color:var(--muted);max-width:475px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}.btn.primary{background:var(--green);color:#11130b;border-color:var(--green);box-shadow:0 8px 28px #a7ff3520}.btn.primary:hover{transform:translateY(-2px);box-shadow:0 10px 35px #a7ff3540}.btn.secondary{background:#ffffff06}
+    .coin-stage{min-height:440px;position:relative;display:grid;place-items:center;isolation:isolate}.glow{position:absolute;width:75%;aspect-ratio:1;border-radius:50%;background:conic-gradient(from 20deg,#a7ff3522,#bd55ff25,#a7ff3522);filter:blur(38px);z-index:-1}
+    .coin{width:min(370px,78vw);aspect-ratio:1;border-radius:50%;position:relative;display:grid;place-items:center;background:radial-gradient(circle at 35% 28%,#3b3f43,#101115 47%,#050506 72%);border:8px solid #c9d0c8;box-shadow:inset 0 0 0 5px #25282c,inset 0 0 0 10px #6d7275,0 25px 70px #000,0 0 55px #a7ff3520;transform:rotate(-8deg);animation:float 6s ease-in-out infinite}
+    .coin:before{content:"";position:absolute;inset:17px;border-radius:50%;border:2px solid #a7ff3580;box-shadow:inset 0 0 24px #a7ff3515,0 0 25px #bd55ff28}.coin:after{content:"";position:absolute;inset:-15px;border-radius:50%;border:4px dashed #a0a5a4;opacity:.65}
+    .coin-inner{text-align:center;transform:rotate(8deg);z-index:1}.coin-z{font-size:clamp(120px,18vw,190px);line-height:.85;font-weight:1000;letter-spacing:-.1em;background:linear-gradient(135deg,#efffd9 0%,var(--green) 35%,#3e9d22 56%,var(--purple) 85%);color:transparent;background-clip:text;-webkit-background-clip:text;text-shadow:0 12px 25px #0008;filter:drop-shadow(0 0 12px #a7ff3540)}
+    .coin-label{font-size:11px;letter-spacing:.28em;font-weight:900;margin-top:16px;color:#e8e8ec}.orbit{position:absolute;width:105%;height:35%;border:1px solid #bd55ff8c;border-radius:50%;transform:rotate(-28deg);box-shadow:0 0 20px #bd55ff20}.orbit.two{width:110%;height:44%;border-color:#a7ff356b;transform:rotate(35deg)}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-12px) rotate(-5deg)}}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:16px;background:#ffffff04;margin:0 auto 80px;overflow:hidden}.stat{padding:22px 25px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font-size:18px}.stat small{display:block;color:var(--muted);font-size:10px;margin-top:7px;letter-spacing:.13em;text-transform:uppercase}
+    section{padding:40px 0 86px}.section-top{max-width:650px;margin-bottom:30px}.kicker{color:var(--purple);font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}.section-top h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.06em;margin:12px 0}.section-top p{color:var(--muted);line-height:1.75}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{padding:25px;border:1px solid var(--line);background:linear-gradient(145deg,#ffffff08,#ffffff02);border-radius:17px;min-height:205px}.card-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#a7ff3512;color:var(--green);font-size:20px;margin-bottom:22px}.card:nth-child(2) .card-icon{background:#bd55ff16;color:var(--purple)}.card:nth-child(3) .card-icon{background:#ffffff0b;color:white}.card h3{margin:0 0 10px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.75}
+    .token-panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:start;border:1px solid var(--line);background:linear-gradient(120deg,#a7ff3509,#bd55ff08);padding:30px;border-radius:20px}.token-panel h2{font-size:34px;letter-spacing:-.05em;margin:8px 0 12px}.token-panel p{color:var(--muted);font-size:13px;line-height:1.7}.token-list{display:grid}.token-row{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid #ffffff12;font-size:13px}.token-row:last-child{border:0}.token-row span{color:var(--muted)}.token-row strong{text-align:right;overflow-wrap:anywhere}
+    .address{display:flex;align-items:center;gap:8px;margin-top:18px}.address code{font-size:11px;color:#d8dbe3;background:#050608;border:1px solid var(--line);padding:10px;border-radius:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.copy{background:#ffffff0b;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:10px 12px;cursor:pointer}.notice{border:1px solid #bd55ff44;background:#bd55ff0b;padding:15px 17px;border-radius:12px;color:#d5c5e5;font-size:11px;line-height:1.7;margin-top:22px}
+    .roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.phase{border-top:2px solid var(--green);padding:20px 18px;background:#ffffff04;border-radius:0 0 14px 14px}.phase:nth-child(2){border-color:var(--purple)}.phase:nth-child(3){border-color:#fff}.phase small{color:var(--muted);text-transform:uppercase;letter-spacing:.16em}.phase h3{margin:12px 0}.phase p,.phase li{color:var(--muted);font-size:13px;line-height:1.8}.phase ul{padding-left:17px}
+    .community{padding:38px;border-radius:20px;border:1px solid #a7ff353b;background:radial-gradient(ellipse at 90% 10%,#bd55ff1b,transparent 42%),linear-gradient(120deg,#a7ff350d,#ffffff03);display:flex;align-items:center;justify-content:space-between;gap:24px}.community h2{font-size:clamp(30px,4vw,45px);letter-spacing:-.06em;margin:0 0 10px}.community p{color:var(--muted);line-height:1.7;margin:0;max-width:570px}.community-actions{display:flex;gap:10px;flex-wrap:wrap}
+    footer{border-top:1px solid #ffffff12;padding:26px 0 35px;color:var(--muted);font-size:11px}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot-brand{color:var(--text);font-weight:900;letter-spacing:.08em}
+    @media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr;padding:58px 0 48px}.hero-copy{text-align:center}.eyebrow{justify-content:center}.lead{margin-inline:auto}.actions{justify-content:center}.coin-stage{min-height:390px}.stats{margin-bottom:50px}.cards,.roadmap{grid-template-columns:1fr}.card{min-height:0}.token-panel{grid-template-columns:1fr}.community{align-items:flex-start;flex-direction:column}.community-actions{width:100%}}
+    @media(max-width:480px){nav{height:68px}.nav-cta{padding:10px 11px;font-size:11px}.hero{padding-top:48px}h1{font-size:61px}.coin-stage{min-height:310px}.coin{width:260px}.coin-z{font-size:130px}.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line);padding:16px 20px}.stat:last-child{border-bottom:0}.token-panel{padding:21px}.address{align-items:stretch}.community{padding:25px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top" aria-label="Zaza Coin home"><span class="mark">Z</span><span>ZAZA COIN</span></a>
+      <div class="links"><a href="#about">About</a><a href="#token">Token</a><a href="#roadmap">Roadmap</a><a href="#community">Community</a></div>
+      <a class="nav-cta" href="#token">Explore the token ↗</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="dot"></span> A community-powered coin concept</div>
+          <h1><span>THE</span><span class="grad">ZAZA</span><span>ERA.</span></h1>
+          <p class="lead">Meet ZAZA COIN — <strong>The Smokers Currency.</strong> A loud little corner of the internet built around memes, community, and a neon green-and-purple attitude.</p>
+          <div class="actions">
+            <a class="btn primary" href="#community">Join the community <span>↗</span></a>
+            <a class="btn secondary" href="#token">Token details <span>↓</span></a>
+          </div>
+        </div>
+        <div class="coin-stage" aria-label="Stylized Zaza Coin emblem">
+          <div class="glow"></div><div class="orbit"></div><div class="orbit two"></div>
+          <div class="coin"><div class="coin-inner"><div class="coin-z">Z</div><div class="coin-label">ZAZA • COIN</div></div></div>
+        </div>
+      </section>
+
+      <div class="stats" aria-label="Token highlights">
+        <div class="stat"><strong>Built for the community</strong><small>Culture comes first</small></div>
+        <div class="stat"><strong>Solana concept</strong><small>Network plan — verify before launch</small></div>
+        <div class="stat"><strong>$ZAZA</strong><small>Proposed ticker</small></div>
+      </div>
+
+      <section id="about">
+        <div class="section-top"><div class="kicker">What is ZAZA?</div><h2>More than a ticker.<br><span class="grad">It's a whole vibe.</span></h2><p>ZAZA COIN is imagined as a community-led meme token with its own look, language, and online hangout. The goal: make the community memorable, keep the project transparent, and let the memes do the talking.</p></div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">✳</div><h3>Community first</h3><p>A place for holders and curious visitors to connect, share memes, and help shape the culture around ZAZA.</p></article>
+          <article class="card"><div class="card-icon">⌁</div><h3>Unmistakable identity</h3><p>Neon green, electric purple, dark chrome, and a bold visual system made to stand out across socials.</p></article>
+          <article class="card"><div class="card-icon">◇</div><h3>Transparency matters</h3><p>Token details, contract information, and official links should be published clearly before anyone buys.</p></article>
+        </div>
+      </section>
+
+      <section id="token">
+        <div class="section-top"><div class="kicker">Token information</div><h2>Know what you're looking at.</h2><p>Replace the placeholder fields below with verified launch details. Do not publish an unverified contract address or imply a listing that does not exist.</p></div>
+        <div class="token-panel">
+          <div><div class="kicker">The smokers currency</div><h2>ZAZA COIN</h2><p>A meme-token concept. Network, supply, liquidity, and contract details should be confirmed by the project owner and independently checked before launch.</p>
+            <div class="address"><code id="contract">Contract address not added yet</code><button class="copy" id="copyBtn" type="button">Copy</button></div>
+            <div class="notice"><strong>Risk note:</strong> Meme tokens are highly volatile and can lose all value. This site is informational only, not financial advice or a promise of returns. Only use funds you can afford to lose.</div>
+          </div>
+          <div class="token-list">
+            <div class="token-row"><span>Token name</span><strong>ZAZA COIN</strong></div>
+            <div class="token-row"><span>Proposed ticker</span><strong>$ZAZA</strong></div>
+            <div class="token-row"><span>Network</span><strong>Solana — planned</strong></div>
+            <div class="token-row"><span>Total supply</span><strong>To be announced</strong></div>
+            <div class="token-row"><span>Liquidity / lock</span><strong>Not yet verified</strong></div>
+            <div class="token-row"><span>Official chart</span><strong>Link coming soon</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap">
+        <div class="section-top"><div class="kicker">Roadmap</div><h2>One step at a time.</h2><p>This is a suggested roadmap, not a claim that any milestone has already been completed.</p></div>
+        <div class="roadmap">
+          <article class="phase"><small>Phase 01 · Foundation</small><h3>Set the basics</h3><ul><li>Finalize branding and ticker</li><li>Publish verified token details</li><li>Open official community channels</li></ul></article>
+          <article class="phase"><small>Phase 02 · Community</small><h3>Build the culture</h3><ul><li>Community memes and events</li><li>Clear project updates</li><li>Transparent launch communications</li></ul></article>
+          <article class="phase"><small>Phase 03 · Growth</small><h3>Earn attention</h3><ul><li>Explore community partnerships</li><li>Improve the site with real data</li><li>Review next steps with the community</li></ul></article>
+        </div>
+      </section>
+
+      <section id="community">
+        <div class="community"><div><div class="kicker">Find your people</div><h2>Pull up to the <span class="grad">ZAZA side.</span></h2><p>Community links are placeholders until you add your official X and chart links. Only trust links published by the project owner.</p></div>
+          <div class="community-actions"><a class="btn secondary" href="#" data-placeholder="x">Follow on X ↗</a></div>
+        </div>
+      </section>
+    </main>
+    <footer><div class="footer-row"><div class="foot-brand">ZAZA COIN <span style="color:var(--green)">●</span></div><div>THE SMOKERS CURRENCY</div><div>© <span id="year"></span> ZAZA COIN · Community concept</div></div><p style="max-width:850px;line-height:1.7">ZAZA COIN is a meme-token concept. Nothing on this website is investment, legal, or tax advice. No value, liquidity, exchange listing, or return is guaranteed. Verify all token information independently.</p></footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      const text = document.getElementById('contract').textContent.trim();
+      const btn = document.getElementById('copyBtn');
+      if (text === 'Contract address not added yet') { btn.textContent = 'Not added yet'; setTimeout(() => btn.textContent = 'Copy', 1600); return; }
+      try { await navigator.clipboard.writeText(text); btn.textContent = 'Copied!'; }
+      catch { btn.textContent = 'Copy unavailable'; }
+      setTimeout(() => btn.textContent = 'Copy', 1600);
+    });
+    document.querySelectorAll('[data-placeholder]').forEach(link => link.addEventListener('click', event => {
+      event.preventDefault(); alert('Add your official ' + link.dataset.placeholder.toUpperCase() + ' URL in index.html before publishing.');
+    }));
+  </script>
+</body>
+</html>
